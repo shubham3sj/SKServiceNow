@@ -1,0 +1,23 @@
+ If you want to change the background colour of a field (INC number in this example) based on its priority, here's a quick and easy way to do it via Client Script:
+
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+ if (isLoading || newValue === '') {
+ return;
+ }
+ var Priority = g_form.getValue('priority');
+ 
+ // Reset background color before applying new one
+ g_form.getElement('number').style.backgroundColor = "";
+
+ if (Priority == '1') {
+ g_form.getElement('number').style.backgroundColor = "red";
+ } else if (Priority == '2') {
+ g_form.getElement('number').style.backgroundColor = "orange";
+ } else if (Priority == '3') {
+ g_form.getElement('number').style.backgroundColor = "yellow";
+ } else if (Priority == '4') {
+ g_form.getElement('number').style.backgroundColor = "green";
+ }
+}
+
+This simple script will change the background colour of the field based on its priority, helping you visually prioritize tasks more effectively.
