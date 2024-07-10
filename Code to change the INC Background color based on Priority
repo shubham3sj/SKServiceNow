@@ -1,4 +1,4 @@
- If you want to change the background colour of a field (INC number in this example) based on its priority, here's a quick and easy way to do it via Client Script:
+ //If you want to change the background colour of a field (INC number in this example) based on its priority, here's a quick and easy way to do it via Client Script:
 
 function onChange(control, oldValue, newValue, isLoading, isTemplate) {
  if (isLoading || newValue === '') {
@@ -20,4 +20,4 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
  }
 }
 
-This simple script will change the background colour of the field based on its priority, helping you visually prioritize tasks more effectively.
+// This simple script will change the background colour of the field based on its priority, helping you visually prioritize tasks more effectively.
